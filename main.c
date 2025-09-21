@@ -4,23 +4,23 @@
 #include <unistd.h> // Needed for sleep
 #include <windows.h> // Needed for Beep
 
-//The main funktion of this program is to give the customer the parts they need for their project
+//The main function of this program is to give the customer the parts they need for their project
 //I've installed usleep and sleep timers to make the experience a bit more lively
 //There is an easteregg in here if you ask for the right part
 
 int main(){
 
 char input[10]; // checks for exit command or general input
-char spring[] = "Despensing spring"; // spring
+char spring[] = "Dispensing spring"; // spring
 int spring_counter = 2; // can be called twice
-char lever[] = "Despensing lever"; // lever
+char lever[] = "Dispensing lever"; // lever
 int lever_counter = 1; // can be called once
-char button[] =  "Despensing button"; // button
+char button[] =  "Dispensing button"; // button
 int button_counter = 3; // can be called three times
-char resistor[] = "Despensing resistor"; // resistor
+char resistor[] = "Dispensing resistor"; // resistor
 int resistor_counter = 100; // can be called one hundred times
-char ear[] = "Human body parts are illigal at the moment"; // human ear
-int ear_counter = 2; // can be called twice
+char ear[] = "Dispensing human body parts is illigal at the moment"; // human ear
+int ear_counter = 1; // can be called once
 
 int a4 = 440; //Don't think to hard about it, just ask for the ear
 int b4 = 494;
@@ -37,22 +37,23 @@ int e5 = 659;
 
 while(1) { //while-loop is to make sure that no matter the input the loop will go back and ask for a new input untill ended by "exit" command.
     
-printf("\033[31mTo exit the interaction, please type Exit\033[0m\n"); // Exit command explained
+printf("\033[33mTo exit the interaction, please type Exit\033[0m\n"); // Exit command explained
 sleep(1);
 
 printf("Welcome to the supply-shop, what can I get you today?: \n"); // Greetings
 usleep(1500000);
-
+printf("Type the name of the part you want dispensed\n");
+usleep(150000);
 printf("\033[32mParts list:\033[0m\n"); // Parts list
-usleep(300000);
+usleep(200000);
 printf("spring:\n");
-usleep(300000);
+usleep(200000);
 printf("lever:\n");
-usleep(300000);
+usleep(200000);
 printf("button:\n");
-usleep(300000);
+usleep(200000);
 printf("resistor:\n");
-usleep(300000);
+usleep(200000);
 printf("ear:\n");
 printf(">: "); // input line for customer
 scanf("%9s", input); //Part ordered.
